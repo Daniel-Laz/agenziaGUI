@@ -6,6 +6,14 @@ public class Agenzia {
     private Pacchetto[] pacchetti;
     private int cont = 0;
 
+    public String toString(){
+        String out="";
+        for (int i = 0; i< cont ; i++){
+            out+=pacchetti[i].toString()+"\n";
+        }
+        return out;
+    }
+
     public Agenzia(){
         pacchetti = new Pacchetto[100];
     }
@@ -40,7 +48,7 @@ public class Agenzia {
                 min = i;
             }
         }
-        return "min: "+pacchetti[min].toString()+"\n"+"min: "+pacchetti[max].toString();
+        return "min: "+pacchetti[min].toString()+"\n"+"max: "+pacchetti[max].toString();
     }
 
     public double costoMedio(){

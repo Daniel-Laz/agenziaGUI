@@ -37,4 +37,16 @@ public class HelloController {
     protected void pEscursione() {
         agenzia.addPacchettoEscursione(new PacchettoEscursioni(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText()),pensione.isSelected(),Integer.parseInt(nEscursioni.getText())));
     }
+    @FXML
+    protected void visualizza() {
+        output.setText(agenzia.toString());
+    }
+    @FXML
+    protected void minMax() {
+        output.setText(agenzia.visualizzaMaxMin());
+    }
+    @FXML
+    protected void costoMedio() {
+        output.setText(Double.toString(agenzia.costoMedio()));
+    }
 }
