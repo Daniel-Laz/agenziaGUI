@@ -23,6 +23,18 @@ public class HelloController {
 
     @FXML
     protected void pBase() {
-        agenzia.addPacchettoBase();
+        agenzia.addPacchettoBase(new Pacchetto(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText())));
+    }
+    @FXML
+    protected void pVolo() {
+        agenzia.addPacchettoVolo(new PacchettoVolo(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText()),ritorno.isSelected()));
+    }
+    @FXML
+    protected void pPasti() {
+        agenzia.addPacchettoPasti(new PacchettoPasti(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText()),pensione.isSelected()));
+    }
+    @FXML
+    protected void pEscursione() {
+        agenzia.addPacchettoEscursione(new PacchettoEscursioni(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText()),pensione.isSelected(),Integer.parseInt(nEscursioni.getText())));
     }
 }
