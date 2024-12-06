@@ -23,6 +23,7 @@ public class Agenzia {
 
     public void incrementa(){
         if (cont<pacchetti.length){
+            // se l'array è pieno modifica l'ultimo
             cont++;
         }
     }
