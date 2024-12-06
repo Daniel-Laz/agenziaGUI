@@ -21,17 +21,23 @@ public class Agenzia {
         pacchetti = new Pacchetto[n];
     }
 
+    public void incrementa(){
+        if (cont<pacchetti.length){
+            cont++;
+        }
+    }
+
     public void addPacchettoBase(Pacchetto p){
         pacchetti[cont] = p;
-        cont++;
+        incrementa();
     }
     public void addPacchettoVolo(PacchettoVolo p){
         pacchetti[cont] = p;
-        cont++;
+        incrementa();
     }
     public void addPacchettoPasti(PacchettoPasti p){
         pacchetti[cont] = p;
-        cont++;
+        incrementa();
     }
     public void addPacchettoEscursione(PacchettoEscursioni p){
         pacchetti[cont] = p;
