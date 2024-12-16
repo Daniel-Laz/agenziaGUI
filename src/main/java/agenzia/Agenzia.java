@@ -27,11 +27,6 @@ public class Agenzia {
             cont++;
         }
     }
-
-    public void addPacchettoBase(Pacchetto p){
-        pacchetti[cont] = p;
-        incrementa();
-    }
     public void addPacchettoVolo(PacchettoVolo p){
         pacchetti[cont] = p;
         incrementa();
