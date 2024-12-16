@@ -47,7 +47,5 @@ public abstract class Pacchetto{
             return p.costoBase==this.costoBase && p.durata==this.durata && p.destinazione.equals(this.destinazione);
         }else return false;
     }
-    public double calcolaCosto(){
-        return costoBase;
-    }
+    public abstract double calcolaCosto();
 }
