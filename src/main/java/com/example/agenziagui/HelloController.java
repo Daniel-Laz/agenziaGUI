@@ -22,10 +22,6 @@ public class HelloController {
     private TextField nEscursioni;
 
     @FXML
-    protected void pBase() {
-        agenzia.addPacchettoBase(new Pacchetto(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText())));
-    }
-    @FXML
     protected void pVolo() {
         agenzia.addPacchettoVolo(new PacchettoVolo(destinazione.getText(),Integer.parseInt(durata.getText()),Double.parseDouble(costoB.getText()),ritorno.isSelected()));
     }

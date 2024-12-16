@@ -1,6 +1,6 @@
 package agenzia;
 
-public class Pacchetto{
+public abstract class Pacchetto{
     private String destinazione;
     private int durata;
     private double costoBase;
